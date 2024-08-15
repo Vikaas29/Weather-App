@@ -1,0 +1,165 @@
+#logo{
+    position: relative;
+    overflow: hidden;
+    height: 8vh;
+    width:8vh;
+    margin-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.logoImg{
+    width: 6vh;
+    position: absolute;
+}
+#clearSun{
+    animation: clearSun1 10s infinite ;
+}
+@keyframes clearSun1 {
+    0%{
+        
+        left: -13vh;
+    }
+    10%{
+        left: 1vh;
+    }
+    15%{
+        left: 1vh;
+    }
+    25%{
+        left: -13vh;
+    }
+    100%{
+        left: -13vh;
+    }
+}
+#cloudy{
+    animation: cloudy1 10s infinite ;
+}
+@keyframes cloudy1 {
+    0%{
+        right:-13vh;
+    }
+    
+    15%{
+        right:-13vh;
+    }
+    25%{
+        right: 1vh;
+    }
+    55%{
+        right: 1vh;
+        top:1vh;
+    }
+    65%{
+        top:-13vh;
+    }
+    100%{
+        top:-13vh;
+    }
+}
+#rainyCloud{
+    animation: rainyCloud1 10s infinite ;
+}
+@keyframes rainyCloud1 {
+    0%{
+        top:2vh;
+        opacity: 0;
+    }
+    29%{
+        opacity: 0;
+    }
+    30%{
+        top:2vh;
+        opacity: 1;   
+    }
+    32%{
+        opacity: 0;
+    }
+    34%{
+        opacity: 1;
+    }
+    36%{
+        opacity: 0;
+    }
+    38%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    42%{
+        opacity: 1;  
+    }
+    44%{
+        opacity: 0;
+    }
+    46%{
+        opacity: 1;
+    }
+    48%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    52%{
+        opacity: 0;
+    }   
+    100%{
+        opacity: 0;
+    }  
+}
+
+#sunnyCloud{
+    animation: sunnyCloud1 10s infinite ;
+}
+@keyframes sunnyCloud1 {
+    0%{
+        bottom:-13vh
+    }
+    54%{
+        bottom:-13vh
+    }
+    55%{
+        bottom:-13vh
+    }
+    65%{
+        bottom:1vh
+    }
+    75%{
+        bottom:1vh;
+        opacity:1;
+    }
+    85%{
+        bottom:1vh;
+        opacity:0;
+    }
+    100%{
+        bottom:1vh;
+        opacity:0;
+    }
+}
+#rainbowCloud{
+    animation: rainbowCloud1 10s infinite ;
+}
+@keyframes rainbowCloud1 {
+    0%{
+        opacity: 0;
+    }
+    75%{
+        opacity:0;
+    }
+    85%{
+        opacity:1;
+    }
+    97%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
