@@ -554,20 +554,128 @@ video {
   --tw-contain-style:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.bottom-\[0vh\] {
+  bottom: 0vh;
+}
+
+.top-\[10vh\] {
+  top: 10vh;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
 
-.h-\[9vh\] {
-  height: 9vh;
+.h-\[100\%\] {
+  height: 100%;
+}
+
+.h-\[10vh\] {
+  height: 10vh;
+}
+
+.h-\[15vh\] {
+  height: 15vh;
+}
+
+.h-\[4vh\] {
+  height: 4vh;
+}
+
+.h-\[50vh\] {
+  height: 50vh;
+}
+
+.h-\[5vh\] {
+  height: 5vh;
+}
+
+.h-\[85vh\] {
+  height: 85vh;
+}
+
+.max-h-\[512px\] {
+  max-height: 512px;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[100vw\] {
+  width: 100vw;
+}
+
+.w-\[30vw\] {
+  width: 30vw;
+}
+
+.w-\[4vh\] {
+  width: 4vh;
+}
+
+.w-\[80vw\] {
+  width: 80vw;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[615px\] {
+  max-width: 615px;
 }
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-\[0\.5vw\] {
+  gap: 0.5vw;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -582,4 +690,60 @@ video {
 .bg-\[lightblue\] {
   --tw-bg-opacity: 1;
   background-color: rgb(173 216 230 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[Niconne\] {
+  font-family: Niconne;
+}
+
+.font-\[Niconne\2c \] {
+  font-family: Niconne,;
+}
+
+.font-\[Niconne\2c monospace\] {
+  font-family: Niconne,monospace;
+}
+
+.font-\[Nconne\2c monospace\] {
+  font-family: Nconne,monospace;
+}
+
+.text-\[3vw\] {
+  font-size: 3vw;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-\[\] {
+  --tw-drop-shadow: drop-shadow();
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
