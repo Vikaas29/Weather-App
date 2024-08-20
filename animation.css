@@ -1,3 +1,12 @@
+input{
+    color: black;
+    text-shadow: 0px 0px 0px;
+}
+
+header,#mainCard,.dateHolders{
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
 #logo{
     position: relative;
     overflow: hidden;
@@ -91,24 +100,7 @@
     40%{
         opacity: 0;
     }
-    42%{
-        opacity: 1;  
-    }
-    44%{
-        opacity: 0;
-    }
-    46%{
-        opacity: 1;
-    }
-    48%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    52%{
-        opacity: 0;
-    }   
+      
     100%{
         opacity: 0;
     }  
