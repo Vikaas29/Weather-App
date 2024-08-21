@@ -22,12 +22,12 @@
     }
     body{
         background-color: #4158D0;
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        overflow: hidden;
     }
     </style>
 </head>
-<body title="bg-[url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazI1cXM5YnEyeW41a3JxN2tiMW1mN2t0MDh3ZnAzMWM0Mmlic28zaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KZFrf9JusXzmpnPsT6/giphy.webp')] bg-cover">
+<body>
     <header class="h-[10vh]  flex items-center backdrop-blur-[20px]">
         <div id="logoName" class="flex items-center justify-center gap-[0.5vw] ">
             <div id="logo" class="bg-[lightblue]"  >
@@ -46,57 +46,64 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
                 </div>
             </div>
-            <div id="searchButton" class=" w-[4vh] h-[4vh] m-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="#616161"><path d="m29.175 31.99l2.828-2.827l12.019 12.019l-2.828 2.827z"/><circle cx="20" cy="20" r="16"/></g><path fill="#37474f" d="m32.45 35.34l2.827-2.828l8.696 8.696l-2.828 2.828z"/><circle cx="20" cy="20" r="13" fill="#64b5f6"/><path fill="#bbdefb" d="M26.9 14.2c-1.7-2-4.2-3.2-6.9-3.2s-5.2 1.2-6.9 3.2c-.4.4-.3 1.1.1 1.4c.4.4 1.1.3 1.4-.1C16 13.9 17.9 13 20 13s4 .9 5.4 2.5c.2.2.5.4.8.4c.2 0 .5-.1.6-.2c.4-.4.4-1.1.1-1.5"/></svg></div>
-            <div id="location" class=" w-[4vh] h-[4vh] cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><circle cx="36.446" cy="28.864" r="7.225" fill="#fff"/><path fill="#d22f27" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892s-15.903 7.577-15.903 16.896c.002.465.223 11.609 12.96 31.245a3.46 3.46 0 0 0 2.818 1.934c1.84 0 3.094-2.026 3.216-2.232C52.58 40.414 52.58 29.553 52.573 29.11M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083"/><path fill="#ea5a47" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892a15 15 0 0 0-3.865.525c8.395.45 15.1 7.823 15.1 16.85c.006.443.006 11.303-12.813 30.95a6 6 0 0 1-.586.797c.52.584 1.257.928 2.04.954c1.839 0 3.093-2.027 3.215-2.233C52.58 40.414 52.58 29.553 52.573 29.11"/><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M36.545 62.294a3.46 3.46 0 0 1-2.817-1.935C20.99 40.723 20.769 29.58 20.766 29.114c0-9.32 7.134-16.896 15.904-16.896s15.903 7.577 15.903 16.892c.007.444.007 11.304-12.812 30.95c-.122.207-1.377 2.234-3.216 2.234"/><path d="M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083"/></g></svg></div>
+            <div title="Search" id="searchButton" class=" rounded-full hover:bg-slate-400 w-[4vh] h-[4vh] m-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><g fill="#616161"><path d="m29.175 31.99l2.828-2.827l12.019 12.019l-2.828 2.827z"/><circle cx="20" cy="20" r="16"/></g><path fill="#37474f" d="m32.45 35.34l2.827-2.828l8.696 8.696l-2.828 2.828z"/><circle cx="20" cy="20" r="13" fill="#64b5f6"/><path fill="#bbdefb" d="M26.9 14.2c-1.7-2-4.2-3.2-6.9-3.2s-5.2 1.2-6.9 3.2c-.4.4-.3 1.1.1 1.4c.4.4 1.1.3 1.4-.1C16 13.9 17.9 13 20 13s4 .9 5.4 2.5c.2.2.5.4.8.4c.2 0 .5-.1.6-.2c.4-.4.4-1.1.1-1.5"/></svg></div>
+            <div title="Search by location" id="location" class=" rounded-full hover:bg-slate-400 w-[4vh] h-[4vh] cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"><circle cx="36.446" cy="28.864" r="7.225" fill="#fff"/><path fill="#d22f27" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892s-15.903 7.577-15.903 16.896c.002.465.223 11.609 12.96 31.245a3.46 3.46 0 0 0 2.818 1.934c1.84 0 3.094-2.026 3.216-2.232C52.58 40.414 52.58 29.553 52.573 29.11M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083"/><path fill="#ea5a47" d="M52.573 29.11c0-9.315-7.133-16.892-15.903-16.892a15 15 0 0 0-3.865.525c8.395.45 15.1 7.823 15.1 16.85c.006.443.006 11.303-12.813 30.95a6 6 0 0 1-.586.797c.52.584 1.257.928 2.04.954c1.839 0 3.093-2.027 3.215-2.233C52.58 40.414 52.58 29.553 52.573 29.11"/><g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M36.545 62.294a3.46 3.46 0 0 1-2.817-1.935C20.99 40.723 20.769 29.58 20.766 29.114c0-9.32 7.134-16.896 15.904-16.896s15.903 7.577 15.903 16.892c.007.444.007 11.304-12.812 30.95c-.122.207-1.377 2.234-3.216 2.234"/><path d="M36.67 35.914a7.083 7.083 0 1 1 7.083-7.083a7.09 7.09 0 0 1-7.083 7.083"/></g></svg></div>
         </div>
     </header>
 
     
-    <main class="relative w-[100vw] h-[85vh]  flex  justify-center items-center ">
+    <main class="relative w-[100vw] h-[85vh]  flex  justify-center items-center -z-10 ">
         <!-- main card for holding all data -->
-        <div id="mainCard" class=" backdrop-blur-[20px] border absolute top-[10vh] border-black round-[10px] w-[80vw] max-w-[615px]  h-[50vh] max-h-[512px] rounded-xl">
-            <div id="mainDataHolder" class="w-[100%] h-[50%] flex justify-center items-center ">
-                <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="clouds" class="w-[30%]" >
+        <div id="mainCard" class="entryExit1 backdrop-blur-[20px]  absolute top-[10vh] w-[80vw] max-w-[615px]  h-[50vh] max-h-[512px] rounded-2xl">
+            <div id="mainDataHolder" class=" w-[100%] h-[50%] flex justify-center items-center ">
+                <img id="weatherIcon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clouds" class="w-[30%]" >
                 <div id="infoHolder" class=" ">
                     <div id="temp" class="text-6xl">26°C</div>
-                    <div id="location" class="text-2xl">Lucknow</div>
+                    <div id="city" class="text-2xl">Lucknow</div>
                     <div id="date" class="text-2xl">26/08/2024</div>
                 </div>
             </div>
             <div id="data2Hodler" class="w-[100%] h-[50%] flex justify-center items-center " >
-                <div id="humidity" class="w-[100%] h-[50%] flex justify-center items-center ">
-                    <svg class="h-[100%] flex justify-end items-center " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="meteoconsHumidityFill0" x1="14.8" x2="124.2" y1="42.3" y2="231.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3392d6"/><stop offset=".5" stop-color="#3392d6"/><stop offset="1" stop-color="#2477b2"/></linearGradient><symbol id="meteoconsHumidityFill1" viewBox="0 0 164 245.6"><path fill="url(#meteoconsHumidityFill0)" stroke="#2885c7" stroke-miterlimit="10" stroke-width="4" d="M82 3.6c-48.7 72-80 117-80 160.7s35.8 79.3 80 79.3s80-35.5 80-79.3S130.7 75.5 82 3.6Z"><animateTransform additive="sum" attributeName="transform" calcMode="spline" dur="1.5s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite" type="scale" values="1 1; 1 .9; 1 1"/></path></symbol></defs><use width="164" height="245.6" href="#meteoconsHumidityFill1" transform="translate(173.9 133.01)"/><path fill="#fff" d="M218.8 250.5q4.8-4.5 13.7-4.5t13.6 4.5q4.8 4.4 4.8 12.4v8q0 7.8-4.8 12.2t-13.6 4.4q-9 0-13.7-4.4t-4.8-12.2v-8q0-8 4.8-12.4Zm71.2-1.6a2.8 2.8 0 0 1-.6 2.6l-53 73.3a9.4 9.4 0 0 1-2.8 2.8a12.3 12.3 0 0 1-4.6.6h-4.4c-1.3 0-2.1-.4-2.5-1.1a2.8 2.8 0 0 1 .7-2.8l53-73.3a7 7 0 0 1 2.6-2.7a12.7 12.7 0 0 1 4.4-.5h4.9c1.2 0 2 .4 2.3 1.1Zm-57.5 7.6q-7.7 0-7.7 7v6.7q0 7 7.7 7t7.7-7v-6.8q0-6.9-7.7-6.9Zm33.4 36.4q4.7-4.5 13.7-4.5t13.6 4.5q4.8 4.5 4.8 12.4v8q0 7.8-4.8 12.2t-13.7 4.5q-8.9 0-13.6-4.4t-4.8-12.3v-8q0-8 4.8-12.4Zm13.6 6.1q-7.6 0-7.6 7v6.6q0 7 7.6 7t7.7-7v-6.7q0-6.9-7.7-6.9Z"/></svg>
+                <div id="humidity" class="w-[100%] h-[50%] flex justify-center items-end ">
+                    <svg class="h-[100%] translate-y-[25%] flex justify-end items-center " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="meteoconsHumidityFill0" x1="14.8" x2="124.2" y1="42.3" y2="231.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3392d6"/><stop offset=".5" stop-color="#3392d6"/><stop offset="1" stop-color="#2477b2"/></linearGradient><symbol id="meteoconsHumidityFill1" viewBox="0 0 164 245.6"><path fill="url(#meteoconsHumidityFill0)" stroke="#2885c7" stroke-miterlimit="10" stroke-width="4" d="M82 3.6c-48.7 72-80 117-80 160.7s35.8 79.3 80 79.3s80-35.5 80-79.3S130.7 75.5 82 3.6Z"><animateTransform additive="sum" attributeName="transform" calcMode="spline" dur="1.5s" keySplines=".42, 0, .58, 1; .42, 0, .58, 1" repeatCount="indefinite" type="scale" values="1 1; 1 .9; 1 1"/></path></symbol></defs><use width="164" height="245.6" href="#meteoconsHumidityFill1" transform="translate(173.9 133.01)"/><path fill="#fff" d="M218.8 250.5q4.8-4.5 13.7-4.5t13.6 4.5q4.8 4.4 4.8 12.4v8q0 7.8-4.8 12.2t-13.6 4.4q-9 0-13.7-4.4t-4.8-12.2v-8q0-8 4.8-12.4Zm71.2-1.6a2.8 2.8 0 0 1-.6 2.6l-53 73.3a9.4 9.4 0 0 1-2.8 2.8a12.3 12.3 0 0 1-4.6.6h-4.4c-1.3 0-2.1-.4-2.5-1.1a2.8 2.8 0 0 1 .7-2.8l53-73.3a7 7 0 0 1 2.6-2.7a12.7 12.7 0 0 1 4.4-.5h4.9c1.2 0 2 .4 2.3 1.1Zm-57.5 7.6q-7.7 0-7.7 7v6.7q0 7 7.7 7t7.7-7v-6.8q0-6.9-7.7-6.9Zm33.4 36.4q4.7-4.5 13.7-4.5t13.6 4.5q4.8 4.5 4.8 12.4v8q0 7.8-4.8 12.2t-13.7 4.5q-8.9 0-13.6-4.4t-4.8-12.3v-8q0-8 4.8-12.4Zm13.6 6.1q-7.6 0-7.6 7v6.6q0 7 7.6 7t7.7-7v-6.7q0-6.9-7.7-6.9Z"/></svg>
                 
-                    <div id="humidityData" class="translate-x-[-25%] w-[50%] h-[50%] flex justify-start items-center text-2xl" > 100%</div>
-                    <div class="text-2xl absolute bottom-[10%] left-[10%]">Humidity</div>
+                   <div id="humidityDataHolder" class="translate-x-[-25%] w-[50%] h-[50%] flex flex-col justify-center items-start text-sm  md:text-2xl" >
+                    <div id="humidityData" class="w-[50%] h-[50%] flex justify-start items-center " >100%</div>
+                    <div class="">Humidity</div> </div>
+                    
                 </div>
-                <div id="wind" class="w-[100%] h-[50%] flex justify-center items-center  p-[2%]">
+                <div id="wind" class="w-[100%] h-[50%] flex justify-center items-end">
                     <div id="windIcon" class=" relative w-[60%]  flex justify-center items-center ">
-                    <svg class="scale-[0.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#74767b" d="M25 43.75V6.25"/><path stroke="#ff0000" d="M31.25 12.5L25 6.25l-6.25 6.25"/></g></svg>
+                    <svg id="arrow" class="scale-[0.5]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke="#74767b" d="M25 43.75V6.25"/><path stroke="#ff0000" d="M31.25 12.5L25 6.25l-6.25 6.25"/></g></svg>
                     <div id="north" class="absolute h-[30%] w-[30%] top-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M10 15V9l4 6V9"/></g></svg></div>
                     <div id="south" class="absolute h-[30%] w-[30%] bottom-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M10 14.25c0 .414.336.75.75.75H13a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-2a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1h2.25a.75.75 0 0 1 .75.75"/></g></svg></div>
                     <div id="east" class="absolute h-[30%] w-[30%] right-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M14 9h-4v6h4m-4-3h2.5"/></g></svg></div>
                     <div id="west" class="absolute h-[30%] w-[30%] left-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="m9 9l1 6l2-3.75L14 15l1-6"/></g></svg></div>
                     </div>
-                    <div id="windSpeed" class="w-[100%] h-[100%] flex justify-start items-end text-2xl">10m/s</div>
-                    <div class="text-2xl absolute bottom-[8%] ">Wind Speed</div>
-                </div>
+                    <div id="windSpeedHolder" class="w-[100%] h-[100%] flex flex-col justify-end text-xs md:text-2xl">
+                        <div id="windSpeed">10m/s</div>
+                        <div>Wind Speed</div>
+                </div></div>
+                    
             </div>
         </div>
         
-        
+    </main>
+
         <!-- holder for changing main day card -->
-        <div id="dayHolder" class=" absolute bottom-[0vh] h-[15vh] w-[100%] flex  justify-center">
-            <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day1" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer">Today</div></div>
+    <section>
+        <div id="dayHolder" class=" fixed bottom-[5.5vh] h-[15vh] w-[100%] flex  justify-center">
+            <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day1" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer ">Today</div></div>
             <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day2" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer">24/08/2024</div></div>
             <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day3" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer">24/08/2024</div></div>
             <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day4" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer">24/08/2024</div></div>
             <div class="  h-[15vh] w-[100%] flex justify-center items-center font-bold text-[2.5vw]"><div id="day5" class="dateHolders flex justify-center items-center p-[10%] backdrop-blur-[20px] rounded-xl cursor-pointer">24/08/2024</div></div>
         </div>
-    </main>
-    <footer class=" h-[5vh] w-[100%] fixed bottom-0 left-0 bg-slate-400 backdrop-blur-[20px]" >
-   <pre>All Rights Reserved
-content owned by VIKAS YADAV
-    </pre></footer>
+    </section>
+    
+    <footer class="h-[5vh] w-[100%] fixed bottom-0 left-0 bg-slate-400 backdrop-blur-[20px] text-sm flex flex-col justify-end items-center" >
+   <p>All Rights Reserved -- content owned by VIKAS YADAV</p></footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

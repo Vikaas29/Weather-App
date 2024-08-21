@@ -1,3 +1,20 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
 input{
     color: black;
     text-shadow: 0px 0px 0px;
@@ -162,4 +179,147 @@ header,#mainCard,.dateHolders{
 h1{
     color: white;
     text-shadow: 1px 1px 10px  plum;
+}
+
+/* animation for the main card */
+.entryExit1{
+    animation: exit-Entry1 2s linear ;
+}
+
+@keyframes exit-Entry1 {
+
+    25%{
+        scale: 1.5;
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        scale: 1;
+        transform: translateY(0);
+        opacity: 0;
+    }
+    51%{
+        
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    80%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.entryExit2{
+    animation: exit-Entry2 2s linear;
+}
+
+@keyframes exit-Entry2 {
+
+    25%{
+        scale: 1.5;
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        scale: 1;
+        transform: translateY(0);
+        opacity: 0;
+    }
+    51%{
+        
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    80%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.entryExit3{
+    animation: exit-Entry3 2s linear;
+}
+
+@keyframes exit-Entry3 {
+
+    25%{
+        scale: 1.5;
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        scale: 1;
+        transform: translateY(0);
+        opacity: 0;
+    }
+    51%{
+        
+        transform: translateX(-100vh);
+        opacity: 0;
+    }
+    80%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.entryExit4{
+    animation: exit-Entry4 2s linear;
+}
+
+@keyframes exit-Entry4 {
+
+    25%{
+        scale: 1.5;
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        scale: 1;
+        transform: translateY(0);
+        opacity: 0;
+    }
+    51%{
+        
+        transform: translateX(100vh);
+        opacity: 0;
+    }
+    80%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* transition for compass arrow */
+#arrow{
+    transition: all 1s linear;
 }
