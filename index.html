@@ -25,6 +25,10 @@
         background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
         overflow: hidden;
     }
+    #individualHistory{
+        display: flex;
+        gap: 10%;
+    }
     </style>
 </head>
 <body>
@@ -42,7 +46,7 @@
         <div id="inputHolder" class="relative w-[100%] h-[100%] flex items-center justify-end p-5">
             <div class="relative">
                 <input type="text" placeholder="Lucknow" id="input" class="border border-black rounded-xl w-[30vw] max-w-[200px] h-[4vh] p-2 m-1">
-                <div id="historyHolder" class="z-10 bg-grey absolute border border-black rounded-xl w-[30vw] max-w-[200px] max-h-[12vh] p-2 m-1 bg-slate-700 text-white overflow-auto cursor-pointer"><p>asas</p><p>sadasd</p><p>asas</p><p>sadasd</p><p>asas</p><p>sadasd</p>
+                <div id="historyHolder" class="hidden z-10 bg-grey absolute border border-black rounded-xl w-[30vw] max-w-[200px] max-h-[12vh] p-2 m-1 bg-slate-700 text-white overflow-auto cursor-pointer">
 
                 </div>
             </div>
@@ -54,7 +58,7 @@
     
     <main class="relative w-[100vw] h-[85vh]  flex  justify-center items-center -z-10 ">
         <!-- main card for holding all data -->
-        <div id="mainCard" class="entryExit1 backdrop-blur-[20px]  absolute top-[10vh] w-[80vw] max-w-[615px]  h-[50vh] max-h-[512px] rounded-2xl">
+        <div id="mainCard" class=" backdrop-blur-[20px]  absolute top-[10vh] w-[80vw] max-w-[615px]  h-[50vh] max-h-[512px] rounded-2xl">
             <div id="mainDataHolder" class=" w-[100%] h-[50%] flex justify-center items-center ">
                 <img id="weatherIcon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="clouds" class="w-[30%]" >
                 <div id="infoHolder" class=" ">
