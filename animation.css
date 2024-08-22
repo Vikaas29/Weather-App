@@ -21,7 +21,22 @@ input{
 }
 
 header,#mainCard,.dateHolders{
-    background-color: rgba(255, 255, 255, 0.432);
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+@media (max-width:380px) {
+    .dateHolders{
+        border: 2px solid rgba(255, 255, 255, 0.445);
+    }
+}
+@media (min-width:380px) {
+    .dateHolders{
+        border: 5px solid rgba(255, 255, 255, 0.445);
+    }
+}
+
+#mainCard{
+    border: 5px solid rgba(255, 255, 255, 0.445);
 }
 
 #logo{
