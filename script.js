@@ -26,9 +26,13 @@ window.addEventListener("load",()=>{
     
 });
 
-input.addEventListener("focus",()=>{historyHolder.style.display="block"});
+// event listener for input field
+input.addEventListener("focus",()=>{
+    if(localStorage.getItem("history"))
+    {historyHolder.style.display="block"}});
 input.addEventListener("blur",hideHistory);
 
+// function to add data in history field
 function addHistory(data){
     const newInput=document.createElement('div');
     newInput.setAttribute("id","individualHistory");
@@ -42,15 +46,16 @@ function addHistory(data){
     individualdata.innerText=data;
     individualdata.setAttribute("class","data")
     individualdata.addEventListener("click",changeInput)
-    newInput.appendChild(individualdata);
+    
     newInput.appendChild(delIcon);
-
+    newInput.appendChild(individualdata);
 
     historyHolder.appendChild(newInput);
 
     localStorage.setItem("history",historyHolder.innerHTML);
 }
 
+// function to delete history items
 function deleteHistory(e){
 
     const toDelete=e.target.parentElement;
@@ -60,8 +65,11 @@ function deleteHistory(e){
     localStorage.setItem("history",historyHolder.innerHTML);
 }
 
+// to update the value of input field
 function changeInput(e){
     input.value=e.target.innerText;
+    
+    search(input.value);
 }
 
 function hideHistory(){
@@ -72,13 +80,16 @@ function hideHistory(){
 
 document.querySelector("#location").addEventListener("click",getLocation);
 
+// to search on press of ENTER
 input.addEventListener("keypress", (e)=>{
     if(e.key==="Enter"){
         collectInput();
     }
 });
+
 searchButton.addEventListener("click",collectInput);
 
+// to collect data from input field and search
 function collectInput(){
     const a=input.value;
 
@@ -89,6 +100,7 @@ else{
 }
 }
 
+// to call and resolve API
 async function search(cityName){
     
     try{
@@ -110,7 +122,7 @@ async function search(cityName){
     }
 }
 
-
+// function to get location
 function getLocation() {
     if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -118,6 +130,8 @@ function getLocation() {
         alert("GPS error");
     }
 }
+
+// function to call API i response to Lattitude and Longitude
 async function showPosition(position) {
 
     try{console.log(position)
@@ -137,11 +151,10 @@ async function showPosition(position) {
     }
 }
 
+// fucntion to extract data from object
 function dataAssigning(n){
 
-    let x=[1,2,3,4][Math.floor(Math.random()*0)];
-
-    mainCard.classList.add(`entryExit${x}`);
+    mainCard.classList.add(`entryExit`);
 
     setTimeout(()=>{city1=weatherData.city.name;
     temp1=weatherData.list[n].main.temp;
@@ -154,13 +167,13 @@ function dataAssigning(n){
 
     cardUpdater();
 
-    
-
     },1000);
 
-    setTimeout(()=>mainCard.classList.remove(`entryExit${x}`),2001);
+    // to wait for the animation to complete
+    setTimeout(()=>mainCard.classList.remove(`entryExit`),2001);
 }
 
+// to update the main card
 function cardUpdater(){
     weatherIcon.src=`https://openweathermap.org/img/wn/${icon}@2x.png`;
     temp.innerText=`${Math.floor(temp1)}°C`;
@@ -173,6 +186,7 @@ function cardUpdater(){
     arrow.style.transform=`rotate(${windDirection1}deg)`;
 }
 
+// to update the cards at the bottom
 function dateUpdater(){
    day2.innerText=weatherData.list[8].dt_txt.split(" ")[0];
    day3.innerText=weatherData.list[16].dt_txt.split(" ")[0];
@@ -180,6 +194,7 @@ function dateUpdater(){
    day5.innerText=weatherData.list[32].dt_txt.split(" ")[0];
 }
 
+// eventListener for bottom cards
 day1.addEventListener("click",()=>dataAssigning(0));
 day2.addEventListener("click",()=>dataAssigning(8));
 day3.addEventListener("click",()=>dataAssigning(16));

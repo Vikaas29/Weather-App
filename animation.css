@@ -197,7 +197,7 @@ h1{
 }
 
 /* animation for the main card */
-.entryExit1{
+.entryExit{
     animation: exit-Entry1 2s linear ;
 }
 
@@ -217,140 +217,30 @@ h1{
     }
 }
 
-/* @keyframes exit-Entry1 {
-
-    25%{
-        scale: 1.5;
-        opacity: 0;
-        transform: translateY(0);
-    }
-    50%{
-        scale: 1;
-        transform: translateY(0);
-        opacity: 0;
-    }
-    51%{
-        
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-    80%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-.entryExit2{
-    animation: exit-Entry2 2s linear;
-}
-
-@keyframes exit-Entry2 {
-
-    25%{
-        scale: 1.5;
-        opacity: 0;
-        transform: translateY(0);
-    }
-    50%{
-        scale: 1;
-        transform: translateY(0);
-        opacity: 0;
-    }
-    51%{
-        
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    80%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.entryExit3{
-    animation: exit-Entry3 2s linear;
-}
-
-@keyframes exit-Entry3 {
-
-    25%{
-        scale: 1.5;
-        opacity: 0;
-        transform: translateY(0);
-    }
-    50%{
-        scale: 1;
-        transform: translateY(0);
-        opacity: 0;
-    }
-    51%{
-        
-        transform: translateX(-100vh);
-        opacity: 0;
-    }
-    80%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.entryExit4{
-    animation: exit-Entry4 2s linear;
-}
-
-@keyframes exit-Entry4 {
-
-    25%{
-        scale: 1.5;
-        opacity: 0;
-        transform: translateY(0);
-    }
-    50%{
-        scale: 1;
-        transform: translateY(0);
-        opacity: 0;
-    }
-    51%{
-        
-        transform: translateX(100vh);
-        opacity: 0;
-    }
-    80%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100%{
-        
-        transform: translateY(0);
-        opacity: 1;
-    }
-} */
 
 /* transition for compass arrow */
 #arrow{
     transition: all 1s linear;
 }
+
+/* shadow animation */
+
+#logo{
+    animation: shadowGame 1s linear infinite alternate;
+}
+.dateHolders{
+    animation: shadowGame 1s linear infinite alternate;
+}
+input{
+    animation: shadowGame 1s linear infinite alternate;
+}
+
+@keyframes shadowGame {
+    0%{
+        box-shadow: 0px 0px 0px white;
+    }
+    100%{
+        box-shadow: 0px 0px 10px white;
+    }
+}
+
